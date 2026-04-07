@@ -13,7 +13,7 @@ function BasicInformation() {
     const id = queryParams.get('id');
 
     useEffect(() => {
-        fetch(`http://187.124.157.146:5001/api/categories/${id}`)
+        fetch(`https://187.124.157.146.nip.io/continental/api/categories/${id}`)
             .then(res => res.json())
             .then(data => {
                 if (data && data.category) {
@@ -45,7 +45,7 @@ function BasicInformation() {
         e.preventDefault();
         try {
             const token = sessionStorage.getItem('authToken');
-            const res = await fetch(`http://187.124.157.146:5001/api/categories/update/${id}`, {
+            const res = await fetch(`https://187.124.157.146.nip.io/continental/api/categories/update/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Authorization': `Bearer ${token}`,

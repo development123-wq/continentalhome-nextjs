@@ -37,8 +37,8 @@ function Resetpassword() {
     try {
       const response = await fetch(
         token
-          ? 'http://187.124.157.146:5001/api/customers/reset-password'
-          : 'http://187.124.157.146:5001/api/customers/forget-password',
+          ? 'https://187.124.157.146.nip.io/continental/api/customers/reset-password'
+          : 'https://187.124.157.146.nip.io/continental/api/customers/forget-password',
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },

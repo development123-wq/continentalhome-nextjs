@@ -78,7 +78,7 @@ const ProductDetails = () => {
             sku: cleanText(prod.sku),
           };
           setProduct(cleanedProduct);
-          setSelectedImage(`http://187.124.157.146:5001/${prod.main_image}`);
+          setSelectedImage(`https://187.124.157.146.nip.io/continental/${prod.main_image}`);
         } else {
           console.error('Product not found or API error:', res);
           setProduct(null);
@@ -95,7 +95,7 @@ const ProductDetails = () => {
 
     const productData = {
       name: product.name,
-      image: selectedImage || `http://187.124.157.146:5001/${product.main_image}`,
+      image: selectedImage || `https://187.124.157.146.nip.io/continental/${product.main_image}`,
       price: product.price,
       quantity: quantity
     };
@@ -124,7 +124,7 @@ const ProductDetails = () => {
 
     try {
       const res = await axios.post(
-        'http://187.124.157.146:5001/api/wishlists/add',
+        'https://187.124.157.146.nip.io/continental/api/wishlists/add',
         payload,
         {
           headers: {
@@ -153,21 +153,21 @@ const ProductDetails = () => {
             ) : product ? (
               <div className="col-md-12 product-details-main-container" style={{ width: '100%' }}>
                 <div className="col-md-6 main-image-container main2-image-container" style={{background:'#ffffff',margin:'20px', height: '710px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center' }}>
-                  <ZoomImage src={selectedImage || `http://187.124.157.146:5001/${product.main_image}`} width={400} height={400} />
+                  <ZoomImage src={selectedImage || `https://187.124.157.146.nip.io/continental/${product.main_image}`} width={400} height={400} />
                   
                   {Array.isArray(product.images) && product.images.length > 0 && (
                     <div className="gallery-thumbnails" style={{ display: 'flex', marginTop: '15px', gap: '10px' }}>
                       {product.images.map((img, index) => (
                         <img
                           key={index}
-                          src={`http://187.124.157.146:5001/${img}`}
+                          src={`https://187.124.157.146.nip.io/continental/${img}`}
                           alt={`Gallery ${index}`}
-                          onClick={() => setSelectedImage(`http://187.124.157.146:5001/${img}`)}
+                          onClick={() => setSelectedImage(`https://187.124.157.146.nip.io/continental/${img}`)}
                           style={{
                             width: '80px',
                             height: '80px',
                             objectFit: 'cover',
-                            border: selectedImage === `http://187.124.157.146:5001/${img}` ? '2px solid #007bff' : '1px solid #ccc',
+                            border: selectedImage === `https://187.124.157.146.nip.io/continental/${img}` ? '2px solid #007bff' : '1px solid #ccc',
                             cursor: 'pointer'
                           }}
                         />

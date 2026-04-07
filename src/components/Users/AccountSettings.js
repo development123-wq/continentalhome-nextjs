@@ -63,7 +63,7 @@ const AccountSettings = () => {
   };
 
   const fetchProfile = () => {
-    fetch('http://187.124.157.146:5001/api/customers/user/profiles', {
+    fetch('https://187.124.157.146.nip.io/continental/api/customers/user/profiles', {
       headers: {
         'Authorization': `Bearer ${token}`,
       },
@@ -115,7 +115,7 @@ const AccountSettings = () => {
     };
 
     try {
-      const res = await fetch('http://187.124.157.146:5001/api/customers/user/updateprofiles', {
+      const res = await fetch('https://187.124.157.146.nip.io/continental/api/customers/user/updateprofiles', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

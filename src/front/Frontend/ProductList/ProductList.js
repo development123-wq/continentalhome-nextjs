@@ -17,7 +17,7 @@ const ProductList = () => {
   };
 
   useEffect(() => {
-    fetch('http://187.124.157.146:5001/api/products') 
+    fetch('https://187.124.157.146.nip.io/continental/api/products') 
       .then((res) => res.json())
       .then((data) => {
         let items = [];
@@ -69,7 +69,7 @@ const ProductList = () => {
                   <a href={`/productdetails?id=${product.id}`}>
                     <div className="product-define" style={{ width: '95%' }}>
                       <img
-                        src={`http://187.124.157.146:5001/${product.main_image}`}
+                        src={`https://187.124.157.146.nip.io/continental/${product.main_image}`}
                         alt={product.name || 'Product'}
                         style={{ maxWidth: '230px', borderRadius: '20px',height:'230px',objectFit:'contain',padding:'10px' }}
                       />

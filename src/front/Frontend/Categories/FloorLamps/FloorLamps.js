@@ -9,7 +9,7 @@ const SmallCeramics = () => {
   const productsPerPage = 12;
 
   useEffect(() => {
-    fetch('http://187.124.157.146:5001/api/products?search=&page=1&limit=500&categoryId=51')
+    fetch('https://187.124.157.146.nip.io/continental/api/products?search=&page=1&limit=500&categoryId=51')
       .then((res) => res.json())
       .then((response) => {
         if (Array.isArray(response.products)) {
@@ -77,7 +77,7 @@ const SmallCeramics = () => {
                   >
                     <div className="main-image-container" style={{ textAlign: 'center' }}>
                       <img
-                        src={`http://187.124.157.146:5001/${item.main_image}`}
+                        src={`https://187.124.157.146.nip.io/continental/${item.main_image}`}
                         alt={item.name}
                         style={{ width: '100%', height: 'auto' }}
                       />

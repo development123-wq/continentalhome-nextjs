@@ -13,7 +13,7 @@ const ContentPart = () => {
 
   useEffect(() => {
     axios
-      .get('http://187.124.157.146:5001/api/featureds')
+      .get('https://187.124.157.146.nip.io/continental/api/featureds')
       .then((res) => setBanners(res.data))
       .catch((err) => {
         console.error('Error loading featured banners:', err);
@@ -63,7 +63,7 @@ const ContentPart = () => {
               <SwiperSlide key={index}>
                 <div className="shadow-xl rounded-2xl p-6 text-center container-img-banner">
                   <img
-                    src={`http://187.124.157.146:5001/${item.image}`}
+                    src={`https://187.124.157.146.nip.io/continental/${item.image}`}
                     alt={item.title}
                     style={{ width: '100%', height: '470px', objectFit: 'cover' }}
                   />

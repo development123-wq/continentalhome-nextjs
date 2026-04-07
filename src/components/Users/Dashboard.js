@@ -22,7 +22,7 @@ const Dashboard = () => {
     }
 
     axios
-      .get('http://187.124.157.146:5001/api/stats/customer-stats', {
+      .get('https://187.124.157.146.nip.io/continental/api/stats/customer-stats', {
         headers: {
           Authorization: `Bearer ${token}`,
         },

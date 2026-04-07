@@ -9,7 +9,7 @@ const Content = () => {
   useEffect(() => {
     const fetchPolicy = async () => {
       try {
-        const response = await fetch('http://187.124.157.146:5001/api/policies/terms-conditions');
+        const response = await fetch('https://187.124.157.146.nip.io/continental/api/policies/terms-conditions');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }

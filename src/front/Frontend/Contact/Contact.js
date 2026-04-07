@@ -7,7 +7,7 @@ const Shop = () => {
   const [contactData, setContactData] = useState(null);
 
   useEffect(() => {
-    fetch('http://187.124.157.146:5001/api/contact')
+    fetch('https://187.124.157.146.nip.io/continental/api/contact')
       .then(res => res.json())
       .then(data => {
         console.log('Fetched data:', data); // Debug log
@@ -32,7 +32,7 @@ const Shop = () => {
   return (
     <div className="main-blogpage">
       <Navbar />
-      <InnerBanner bannerImage={`http://187.124.157.146:5001/${contactData.banner_image}`} />
+      <InnerBanner bannerImage={`https://187.124.157.146.nip.io/continental/${contactData.banner_image}`} />
 
       <div className="container">
         <div className="col-md-12 social-contact-main-container">

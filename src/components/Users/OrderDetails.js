@@ -18,7 +18,7 @@ function OrderDetails({ orderId }) {
     }
 
     const token = sessionStorage.getItem('authToken');
-    fetch(`http://187.124.157.146:5001/api/orders/${orderId}`, {
+    fetch(`https://187.124.157.146.nip.io/continental/api/orders/${orderId}`, {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then(res => {

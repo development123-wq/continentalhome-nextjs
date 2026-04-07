@@ -24,7 +24,7 @@ const Navbar = () => {
 
   useEffect(() => {
     axios
-      .get('http://187.124.157.146:5001/api/categories?search=&page=1&limit=500')
+      .get('https://187.124.157.146.nip.io/continental/api/categories?search=&page=1&limit=500')
       .then((res) => {
         if (res.data.categories) {
           setCategories(res.data.categories);
@@ -42,7 +42,7 @@ const Navbar = () => {
 
     const delayDebounce = setTimeout(() => {
       axios
-        .get(`http://187.124.157.146:5001/api/products?search=${searchQuery}&page=1&limit=500`)
+        .get(`https://187.124.157.146.nip.io/continental/api/products?search=${searchQuery}&page=1&limit=500`)
         .then((res) => {
           if (Array.isArray(res.data.products)) {
             setSearchResults(res.data.products);
@@ -111,7 +111,7 @@ const Navbar = () => {
                         onClick={() => setShowSearchDropdown(false)}
                       >
                         <img
-                          src={`http://187.124.157.146:5001/${product.main_image}`}
+                          src={`https://187.124.157.146.nip.io/continental/${product.main_image}`}
                           alt={product.name}
                           style={{
                             width: '40px',

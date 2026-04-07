@@ -24,7 +24,7 @@ function SignIn() {
     setError('');
 
     try {
-      const response = await axios.post('http://187.124.157.146:5001/api/customers/logincustomer', {
+      const response = await axios.post('https://187.124.157.146.nip.io/continental/api/customers/logincustomer', {
         email,
         password
       });

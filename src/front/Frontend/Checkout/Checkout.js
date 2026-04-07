@@ -367,7 +367,7 @@ const Checkout = () => {
     }
 
     try {
-      await axios.post('http://187.124.157.146:5001/api/orders/create', makePayload(), {
+      await axios.post('https://187.124.157.146.nip.io/continental/api/orders/create', makePayload(), {
         headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
       });
 
@@ -395,7 +395,7 @@ const Checkout = () => {
 
   const handleLogin = async () => {
     try {
-      const res = await axios.post('http://187.124.157.146:5001/api/customers/logincustomer', {
+      const res = await axios.post('https://187.124.157.146.nip.io/continental/api/customers/logincustomer', {
         email: loginEmail,
         password: loginPassword,
       });

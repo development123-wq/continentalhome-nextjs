@@ -28,7 +28,7 @@ function Orders({ onSelectOrder }) {
     setLoading(true);
 
     fetch(
-      `http://187.124.157.146:5001/api/orders/fcustomer/${customerId}?page=${page}&limit=${rowsPerPage}`,
+      `https://187.124.157.146.nip.io/continental/api/orders/fcustomer/${customerId}?page=${page}&limit=${rowsPerPage}`,
       { headers: { Authorization: `Bearer ${token}` } }
     )
       .then(res => {
@@ -61,7 +61,7 @@ function Orders({ onSelectOrder }) {
     console.log("Submitting Complaint:", payload);
 
     try {
-      const res = await fetch('http://187.124.157.146:5001/api/supports/customer/send', {
+      const res = await fetch('https://187.124.157.146.nip.io/continental/api/supports/customer/send', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -17,7 +17,7 @@ function BasicInformation() {
     try {
       const token = sessionStorage.getItem('authToken');
 
-      const res = await fetch('http://187.124.157.146:5001/api/categories/add', {
+      const res = await fetch('https://187.124.157.146.nip.io/continental/api/categories/add', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

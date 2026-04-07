@@ -15,7 +15,7 @@ const Categories = ({ onCategoryChange, onSubcategoryChange }) => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch('http://187.124.157.146:5001/api/categories?page=1&limit=20');
+        const response = await fetch('https://187.124.157.146.nip.io/continental/api/categories?page=1&limit=20');
         const data = await response.json();
 
         let categoryArray = [];

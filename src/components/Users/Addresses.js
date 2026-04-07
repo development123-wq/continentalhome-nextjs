@@ -76,7 +76,7 @@ const Addresses = () => {
 
     try {
       const res = await axios.get(
-        'http://187.124.157.146:5001/api/customers/user/address',
+        'https://187.124.157.146.nip.io/continental/api/customers/user/address',
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -108,7 +108,7 @@ const Addresses = () => {
 
     try {
       const response = await axios.put(
-        'http://187.124.157.146:5001/api/customers/user/updateaddress',
+        'https://187.124.157.146.nip.io/continental/api/customers/user/updateaddress',
         JSON.stringify(address),
         {
           headers: {

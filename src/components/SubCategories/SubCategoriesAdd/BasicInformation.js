@@ -8,7 +8,7 @@ function BasicInformation() {
 
   // 🔄 Fetch Parent Categories
   useEffect(() => {
-    fetch('http://187.124.157.146:5001/api/categories?search=&page=1&limit=1000')
+    fetch('https://187.124.157.146.nip.io/continental/api/categories?search=&page=1&limit=1000')
       .then((res) => res.json())
       .then((data) => {
         const options = (data?.categories || []).map((cat) => ({
@@ -39,7 +39,7 @@ function BasicInformation() {
     try {
       const token = sessionStorage.getItem('authToken');
 
-      const res = await fetch('http://187.124.157.146:5001/api/subcategories/add', {
+      const res = await fetch('https://187.124.157.146.nip.io/continental/api/subcategories/add', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
