@@ -33,7 +33,7 @@ const Shop = () => {
 
   const fetchAllProducts = async () => {
     try {
-      const res = await axios.get('https://187.124.157.146.nip.io/continental/api/products?search=&page=1&limit=5000');
+      const res = await axios.get('http://187.124.157.146:5001/api/products?search=&page=1&limit=5000');
       if (res.data && Array.isArray(res.data.products)) {
         setAllProducts(res.data.products);
       }
@@ -42,7 +42,7 @@ const Shop = () => {
 
   const fetchCategories = async () => {
     try {
-      const res = await axios.get('https://187.124.157.146.nip.io/continental/api/categories');
+      const res = await axios.get('http://187.124.157.146:5001/api/categories');
       setCategories(res.data.categories || []);
     } catch (err) { console.error(err); }
   };
@@ -69,7 +69,7 @@ const Shop = () => {
   const handleWishlistClick = async (productId, e, itemName) => {
     e.preventDefault();
     try {
-      await axios.post('https://187.124.157.146.nip.io/continental/api/wishlists/add', {
+      await axios.post('http://187.124.157.146:5001/api/wishlists/add', {
         guestId: 'abc-1234', productId: Number(productId), quantity: '1'
       });
       alert(`Added ${itemName} to wishlist!`);
@@ -128,7 +128,7 @@ const Shop = () => {
               <div className="product-card-item" key={item.id}>
                 <div className="p-card-inner">
                   <div className="p-img-holder">
-                    <a href={`/productdetails?id=${item.id}`}><img src={`https://187.124.157.146.nip.io/continental/${item.main_image}`} alt={item.name} /></a>
+                    <a href={`/productdetails?id=${item.id}`}><img src={`http://187.124.157.146:5001/${item.main_image}`} alt={item.name} /></a>
                     <button className="wish-heart" onClick={(e) => handleWishlistClick(item.id, e, item.name)}>
                       <i className="fa fa-heart"></i>
                     </button>

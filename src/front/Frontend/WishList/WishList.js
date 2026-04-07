@@ -14,7 +14,7 @@ function Wishlist() {
     (async () => {
       try {
         const res = await axios.get(
-          `https://187.124.157.146.nip.io/continental/api/wishlists?guestId=${guestId}`
+          `http://187.124.157.146:5001/api/wishlists?guestId=${guestId}`
         );
         setWishlistItems(Array.isArray(res.data?.items) ? res.data.items : []);
       } catch (err) {
@@ -34,7 +34,7 @@ function Wishlist() {
 
     try {
       await axios.delete(
-        'https://187.124.157.146.nip.io/continental/api/wishlists/remove',
+        'http://187.124.157.146:5001/api/wishlists/remove',
         {
           headers,
           data: { guestId, productId },
@@ -86,7 +86,7 @@ function Wishlist() {
                 >
                   <td style={td}>
                     <img
-                      src={`https://187.124.157.146.nip.io/continental/${it.main_image}`}
+                      src={`http://187.124.157.146:5001/${it.main_image}`}
                       alt=""
                       style={imgStyle}
                     />

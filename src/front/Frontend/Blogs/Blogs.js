@@ -9,7 +9,7 @@ const Shop = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('https://187.124.157.146.nip.io/continental/api/blogs?search=&page=1&limit=10')
+    fetch('http://187.124.157.146:5001/api/blogs?search=&page=1&limit=10')
       .then(res => {
         if (!res.ok) {
           throw new Error('Failed to fetch');
@@ -44,7 +44,7 @@ const Shop = () => {
                 
                 {/* Construct image URL (assuming base URL) */}
                 <a href={`/details?id=${blog.id}`}>
-                <img src={`https://187.124.157.146.nip.io/continental/${blog.image}`} alt={blog.title} style={{width:'100%',borderRadius:'10px',marginBottom:'10px',height:'250px',objectFit:'cover'}}/>                
+                <img src={`http://187.124.157.146:5001/${blog.image}`} alt={blog.title} style={{width:'100%',borderRadius:'10px',marginBottom:'10px',height:'250px',objectFit:'cover'}}/>                
                 <h3 className="blog-page-title">{blog.title}</h3></a>
                 <p className="description">{blog.short_description}</p>
                 <p className="description">

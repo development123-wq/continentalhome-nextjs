@@ -21,7 +21,7 @@ const Footer = () => {
     setIsLoading(true); // start loader
     try {
       await axios.post(
-        'https://187.124.157.146.nip.io/continental/api/stats/subscribe',
+        'http://187.124.157.146:5001/api/stats/subscribe',
         { email },
         { headers: { 'Content-Type': 'application/json' } }
       );

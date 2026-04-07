@@ -38,7 +38,7 @@ function RecentTransaction() {
         const fetchOrders = async () => {
             try {
                 const response = await axios.get(
-                    'https://187.124.157.146.nip.io/continental/api/orders?search=&status=&page=1&limit=2534'
+                    'http://187.124.157.146:5001/api/orders?search=&status=&page=1&limit=2534'
                 );
                 const allOrders = response.data.orders || [];
                 setOrders([...allOrders].reverse()); // Reverse order here

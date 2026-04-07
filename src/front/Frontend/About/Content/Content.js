@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 
 const Content = () => {
   const [aboutUsData, setAboutUsData] = useState(null);
-  const baseURL = 'https://187.124.157.146.nip.io/continental/'; // Base URL for images
+  const baseURL = 'http://187.124.157.146:5001/'; // Base URL for images
 
   useEffect(() => {
-    fetch('https://187.124.157.146.nip.io/continental/api/aboutus')
+    fetch('http://187.124.157.146:5001/api/aboutus')
       .then((res) => res.json())
       .then((data) => {
         setAboutUsData(data.aboutUs);

@@ -7,7 +7,7 @@ const OctopusTheme = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch('https://187.124.157.146.nip.io/continental/api/products?search=&page=1&limit=500&categoryId=23&subcategoryId=20')
+    fetch('http://187.124.157.146:5001/api/products?search=&page=1&limit=500&categoryId=23&subcategoryId=20')
       .then((res) => res.json())
       .then((response) => {
         console.log('Full API Response:', response);
@@ -44,7 +44,7 @@ const OctopusTheme = () => {
                 <a href={`/productdetails?id=${item.id}&cat=${item.category_ids}`}>
                 <div className="product-define" key={item.id}>
                   <div className="main-image-container">
-                    <img src={`https://187.124.157.146.nip.io/continental/${item.main_image}`} alt={item.name} />
+                    <img src={`http://187.124.157.146:5001/${item.main_image}`} alt={item.name} />
                   </div>
                   <h3>{item.name}</h3>
                   <p className="price">${item.price}</p>

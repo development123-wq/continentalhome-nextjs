@@ -41,7 +41,7 @@ function Verification() {
         setLoading(true);
 
         try {
-            const response = await fetch('https://187.124.157.146.nip.io/continental/api/customers/reset-password', {
+            const response = await fetch('http://187.124.157.146:5001/api/customers/reset-password', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

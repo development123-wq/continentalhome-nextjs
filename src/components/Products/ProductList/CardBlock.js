@@ -20,7 +20,7 @@ function CardBlock() {
 
   useEffect(() => {
     axios
-      .get('https://187.124.157.146.nip.io/continental/api/products?limit=5000')
+      .get('http://187.124.157.146:5001/api/products?limit=5000')
       .then((res) => {
         const products = res.data?.products || [];
         setProductList(products);
@@ -66,7 +66,7 @@ function CardBlock() {
 
     if (window.confirm('Delete this product?')) {
       axios
-        .delete(`https://187.124.157.146.nip.io/continental/api/products/delete/${id}`, {
+        .delete(`http://187.124.157.146:5001/api/products/delete/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then(() =>
@@ -87,7 +87,7 @@ function CardBlock() {
       Authorization: `Bearer ${token}`,
       'Content-Type': 'application/json',
     };
-    const url = `https://187.124.157.146.nip.io/continental/api/products/${id}/popular`;
+    const url = `http://187.124.157.146:5001/api/products/${id}/popular`;
 
     try {
       await axios.patch(url, { isPopular: 1 }, { headers });
@@ -171,7 +171,7 @@ function CardBlock() {
             <Link>
               <img
                 className="w120 rounded img-fluid"
-                src={`https://187.124.157.146.nip.io/continental/${d.main_image}`}
+                src={`http://187.124.157.146:5001/${d.main_image}`}
                 alt=""
               />
             </Link>

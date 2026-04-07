@@ -57,7 +57,7 @@ function ProfileSetting() {
             // alert(`✅ Token mil gaya: ${token.substring(0, 30)}...`);
 
             const response = await axios.get(
-                'https://187.124.157.146.nip.io/continental/api/admin/get-admin-profile',
+                'http://187.124.157.146:5001/api/admin/get-admin-profile',
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -149,7 +149,7 @@ function ProfileSetting() {
             }
 
             const response = await axios.put(
-                'https://187.124.157.146.nip.io/continental/api/admin/update-admin-profile',
+                'http://187.124.157.146:5001/api/admin/update-admin-profile',
                 payload,
                 {
                     headers: {

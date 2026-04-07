@@ -17,7 +17,7 @@ const Details = () => {
       return;
     }
 
-    fetch(`https://187.124.157.146.nip.io/continental/api/blogs/${id}`)
+    fetch(`http://187.124.157.146:5001/api/blogs/${id}`)
       .then(res => {
         if (!res.ok) throw new Error('Failed to fetch blog data');
         return res.json();
@@ -87,7 +87,7 @@ const Details = () => {
        
 
         <img
-          src={`https://187.124.157.146.nip.io/continental/${blog.image}`}
+          src={`http://187.124.157.146:5001/${blog.image}`}
           alt={blog.title}
           className="img-fluid rounded mb-4"
           style={{ maxHeight: '450px', objectFit: 'cover', width: '100%' }}

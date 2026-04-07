@@ -17,7 +17,7 @@ function BasicInformation() {
 
   // ✅ Fetch Subcategory Details
   useEffect(() => {
-    fetch(`https://187.124.157.146.nip.io/continental/api/subcategories/${id}`)
+    fetch(`http://187.124.157.146:5001/api/subcategories/${id}`)
       .then((res) => res.json())
       .then((data) => {
         if (data && data.subcategory) {
@@ -61,7 +61,7 @@ function BasicInformation() {
         categoryId: categoryData.category_id, // ✅ This is what the API expects
       };
 
-      const res = await fetch(`https://187.124.157.146.nip.io/continental/api/subcategories/update/${id}`, {
+      const res = await fetch(`http://187.124.157.146:5001/api/subcategories/update/${id}`, {
         method: 'PUT',
         headers: {
           Authorization: `Bearer ${token}`,

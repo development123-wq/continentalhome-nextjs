@@ -23,7 +23,7 @@ function Header(props) {
   const handleLogout = async () => {
     try {
       const token = sessionStorage.getItem('authToken');
-      await axios.post('https://187.124.157.146.nip.io/continental/api/customers/logoutcustomer', {}, {
+      await axios.post('http://187.124.157.146:5001/api/customers/logoutcustomer', {}, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

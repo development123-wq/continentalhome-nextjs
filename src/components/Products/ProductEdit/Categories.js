@@ -9,7 +9,7 @@ function Categories() {
         // Fetch categories data from the API
         const fetchCategories = async () => {
             try {
-                const response = await fetch('https://187.124.157.146.nip.io/continental/api/categories?page=1&limit=20');
+                const response = await fetch('http://187.124.157.146:5001/api/categories?page=1&limit=20');
                 
                 // Check if the response is ok
                 if (!response.ok) {

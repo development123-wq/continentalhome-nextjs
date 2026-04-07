@@ -23,7 +23,7 @@ const SmallCeramics = () => {
     const categoryId = catParam ? catParam.split(',')[0] : '';
 
     fetch(
-      `https://187.124.157.146.nip.io/continental/api/products?search=&page=1&limit=10&categoryId=${categoryId}`
+      `http://187.124.157.146:5001/api/products?search=&page=1&limit=10&categoryId=${categoryId}`
     )
       .then((res) => res.json())
       .then((response) => {
@@ -75,7 +75,7 @@ const SmallCeramics = () => {
                         style={{ textAlign: 'center' }}
                       >
                         <img
-                          src={`https://187.124.157.146.nip.io/continental/${item.main_image}`}
+                          src={`http://187.124.157.146:5001/${item.main_image}`}
                           alt={item.name}
                           style={{ width: '100%', height: 'auto' }}
                         />

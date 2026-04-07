@@ -54,12 +54,12 @@ function Signup() {
     }
 
     try {
-      await axios.post('https://187.124.157.146.nip.io/continental/api/customers/registercustomer', formData, {
+      await axios.post('http://187.124.157.146:5001/api/customers/registercustomer', formData, {
         headers: { 'Content-Type': 'application/json' }
       });
 
       const loginRes = await axios.post(
-        'https://187.124.157.146.nip.io/continental/api/customers/logincustomer',
+        'http://187.124.157.146:5001/api/customers/logincustomer',
         {
           email: formData.email,
           password: formData.password

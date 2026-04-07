@@ -10,8 +10,8 @@ import 'swiper/css/pagination';
 
 import '../../../assets/css/banner.css';
 
-const API_URL = 'https://187.124.157.146.nip.io/continental/api/banners';
-const FILE_BASE = 'https://187.124.157.146.nip.io/continental/';
+const API_URL = 'http://187.124.157.146:5001/api/banners';
+const FILE_BASE = 'http://187.124.157.146:5001/';
 
 const Banner = () => {
   const navigate = useNavigate();

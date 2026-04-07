@@ -15,7 +15,7 @@ function StatusOrderBlock({ order }) {
 
     try {
         const response = await axios.post(
-            'https://187.124.157.146.nip.io/continental/api/orders/change-order-status',
+            'http://187.124.157.146:5001/api/orders/change-order-status',
             {
                 order_id: order?.id,
                 order_status: status

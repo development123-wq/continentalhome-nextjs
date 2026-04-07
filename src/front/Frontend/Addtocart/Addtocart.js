@@ -45,7 +45,7 @@ const Addtocart = () => {
       let totalShipping = 0;
       for (const id of categoryIds) {
         try {
-          const res = await axios.get(`https://187.124.157.146.nip.io/continental/api/categories/${id}`);
+          const res = await axios.get(`http://187.124.157.146:5001/api/categories/${id}`);
           const shipping = parseFloat(res.data?.category?.shipping_cost || 0);
           totalShipping += isNaN(shipping) ? 0 : shipping;
         } catch (err) {
@@ -96,7 +96,7 @@ const Addtocart = () => {
     if (!coupon) return;
 
     try {
-      const res = await axios.get(`https://187.124.157.146.nip.io/continental/api/coupons?page=1&limit=10&search=${encodeURIComponent(coupon)}`);
+      const res = await axios.get(`http://187.124.157.146:5001/api/coupons?page=1&limit=10&search=${encodeURIComponent(coupon)}`);
       const coupons = res?.data?.coupons || [];
 
       const match = coupons.find(c =>

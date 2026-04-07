@@ -29,7 +29,7 @@ const Messages = () => {
       setMsgError('');
       try {
         const { data } = await axios.get(
-          `https://187.124.157.146.nip.io/continental/api/supports/messages?isAdmin=1&customerId=${customerId}&page=1&limit=20`,
+          `http://187.124.157.146:5001/api/supports/messages?isAdmin=1&customerId=${customerId}&page=1&limit=20`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
         /* backend expected to return { messages: [...] } */
@@ -62,7 +62,7 @@ const Messages = () => {
 
     try {
       const { data } = await axios.post(
-        'https://187.124.157.146.nip.io/continental/api/supports/customer/send',
+        'http://187.124.157.146:5001/api/supports/customer/send',
         {
           message,
           isAdmin: 1,
