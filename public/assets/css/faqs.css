@@ -1,0 +1,33 @@
+.faqs-section{
+    max-width:1200px;
+    width:100%;
+    margin:auto;
+    padding:50px 0px;
+}
+.faqs-section h3{
+    width:100%;
+    font-size:18px;
+    padding:15px;
+    border-radius:20px;
+    box-shadow: 0px 0px 20px #dcdcdc;
+}
+.faqs-section h3:hover{
+    background:#63a682;
+    color:#ffffff;
+}
+.faqs-section h3::after{
+    content:" +";
+    position:absolute;
+    right:5%;
+
+}
+.faqs-section div{
+    border-bottom:0px !important;
+    
+}
+
+@media screen and (max-width: 768px) {
+    .faqs-section{
+    padding:50px 10px;
+}
+}

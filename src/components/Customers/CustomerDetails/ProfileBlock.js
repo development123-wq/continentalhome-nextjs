@@ -1,5 +1,5 @@
 import React from 'react';
-import Avatar from '../../../assets/images/lg/avatar4.svg';
+import Avatar from '../../public/assets/images/lg/avatar4.svg';
 import { ProfileBlockData } from '../../Data/CustomerData';
 
 function ProfileBlock() {

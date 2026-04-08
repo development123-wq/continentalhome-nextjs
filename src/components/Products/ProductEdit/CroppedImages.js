@@ -1,7 +1,9 @@
+"use client";
+
 import React, { useState } from 'react';
 import ReactCrop from 'react-image-crop';
 import 'react-image-crop/dist/ReactCrop.css';
-import NODATA from '../../../assets/images/product/Cropimg.jpg'
+import NODATA from '../../public/assets/images/product/Cropimg.jpg'
 
 function CroppedImages(props) {
 

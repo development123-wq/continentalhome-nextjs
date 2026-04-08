@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from 'react';
 import { Modal } from 'react-bootstrap';
 import { onChangeDarkMode, Onopenmodalsetting, onChangeHighcontrast, OnchangeRTLmode, OnGradientColor } from '../../Redux/Actions/Action';

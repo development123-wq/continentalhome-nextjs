@@ -1,8 +1,8 @@
 import React from 'react';
-import A1 from '../../../assets/images/product/shipping-3.png';
-import A2 from '../../../assets/images/product/shipping-3.png';
-import A3 from '../../../assets/images/product/shipping-2.png';
-import A4 from '../../../assets/images/product/shipping-1.png';
+import A1 from '../../public/assets/images/product/shipping-3.png';
+import A2 from '../../public/assets/images/product/shipping-3.png';
+import A3 from '../../public/assets/images/product/shipping-2.png';
+import A4 from '../../public/assets/images/product/shipping-1.png';
 import { Link } from 'react-router-dom';
 
 function Shippingaddress() {

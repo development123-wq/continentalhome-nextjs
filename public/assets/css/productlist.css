@@ -1,0 +1,93 @@
+:root {
+    --primary-green: #63a682;
+
+  }
+.container{
+    width:100%;
+}
+.product_row{
+    width:100%;
+    max-width:1200px;
+    text-align:center;
+    padding:30px 0px;
+    margin: auto !important;
+
+}
+.fancytext{
+    color:var(--primary-green);
+}
+.product-section{
+    width:100%;
+    display:flex;
+    margin-top:30px;
+    gap:30px;
+}
+.product-define{
+    width:25%;
+    float:left;
+    border:1px solid var(--primary-green);
+   
+}
+.product-define h3{
+    font-size:15px;
+    font-weight:600;
+    height:50px;
+}
+.price{
+    color:red;
+}
+.product-define button{
+    background:var(--primary-green);
+    color:#ffffff;
+    font-size:15px;
+    padding:10px 25px;
+    border-radius:0px;
+    border:none;
+    width:100%;
+    margin:auto;
+    margin-top:10px;
+
+}
+
+.product-banner-text{
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+}
+.product-heading{
+    color:#ffffff;
+}
+.next-btn,.prev-btn{
+    background:var(--primary-green);
+    border-radius:100px;
+    padding:5px 10px;
+    color:#ffffff;
+    border:0px;
+}
+@media (max-width: 768px) {
+  .product-define {
+    width: 50%; 
+    float: none;
+  }
+  .product-define img{
+    width:50%;
+  }
+  .product-define button {
+    font-size: 14px;
+    padding: 8px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-define {
+    width: 100%; /* One product per row on mobile */
+    float: none;
+  }
+  .product-define h3 {
+    font-size: 14px;
+  }
+  .product-define button {
+    font-size: 13px;
+    padding: 8px 15px;
+  }
+}

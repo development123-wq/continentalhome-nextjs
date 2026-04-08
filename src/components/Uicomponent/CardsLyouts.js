@@ -104,7 +104,7 @@ function CardsLyouts() {
                     </div>
                 </div>
                 <SyntaxHighlighter language="javascript" className="mt-2 language-html py-2 px-2"  style={a11yLight}>
-                                {`import Thumbnail2 from "../../../assets/images/gallery/2.jpg";
+                                {`import Thumbnail2 from "../../public/assets/images/gallery/2.jpg";
 
 
 <div className="card" style={{width:'18rem'}}>
@@ -206,7 +206,7 @@ function CardsLyouts() {
                     </div>
                 </div>
                 <SyntaxHighlighter language="javascript" className="mt-2 language-html py-2 px-2"  style={a11yLight}>
-                                {`import Thumbnail6 from "../../../assets/images/gallery/6.jpg";
+                                {`import Thumbnail6 from "../../public/assets/images/gallery/6.jpg";
 
 <div className="card" style={{width:'18rem'}}>
     <img className="card-img-top" src={Thumbnail6} alt="" />
@@ -583,8 +583,8 @@ function CardsLyouts() {
                 
                 </div>
                 <SyntaxHighlighter language="javascript" className="mt-2 language-html py-2 px-2"  style={a11yLight}>
-                                {`import Thumbnail10 from "../../../assets/images/gallery/10.jpg";
-import Thumbnail8 from "../../../assets/images/gallery/8.jpg";
+                                {`import Thumbnail10 from "../../public/assets/images/gallery/10.jpg";
+import Thumbnail8 from "../../public/assets/images/gallery/8.jpg";
 
 <div className="card mb-3">
     <img className="card-img-top" src={Thumbnail10} alt="" />
@@ -642,7 +642,7 @@ import Thumbnail8 from "../../../assets/images/gallery/8.jpg";
                     </div>
                 </div>
                 <SyntaxHighlighter language="javascript" className="mt-2 language-html py-2 px-2"  style={a11yLight}>
-                                {`import Thumbnail5 from "../../../assets/images/gallery/5.jpg";
+                                {`import Thumbnail5 from "../../public/assets/images/gallery/5.jpg";
 
 <div className="card mb-3" >
     <div className="row g-0">
@@ -961,9 +961,9 @@ import Thumbnail8 from "../../../assets/images/gallery/8.jpg";
                     </div>
                 </div>
                 <SyntaxHighlighter language="javascript" className="mt-2 language-html py-2 px-2"  style={a11yLight}>
-                                {`import Thumbnail6 from "../../../assets/images/gallery/6.jpg";
-import Thumbnail2 from "../../../assets/images/gallery/2.jpg";
-import Thumbnail5 from "../../../assets/images/gallery/5.jpg";
+                                {`import Thumbnail6 from "../../public/assets/images/gallery/6.jpg";
+import Thumbnail2 from "../../public/assets/images/gallery/2.jpg";
+import Thumbnail5 from "../../public/assets/images/gallery/5.jpg";
 
 <div className="card-group">
     <div className="card">
@@ -1029,9 +1029,9 @@ import Thumbnail5 from "../../../assets/images/gallery/5.jpg";
                     </div>
                 </div>
                 <SyntaxHighlighter language="javascript" className="mt-2 language-html py-2 px-2"  style={a11yLight}>
-                                {`import Thumbnail2 from "../../../assets/images/gallery/2.jpg";
-import Thumbnail6 from "../../../assets/images/gallery/6.jpg";
-import Thumbnail8 from "../../../assets/images/gallery/8.jpg";
+                                {`import Thumbnail2 from "../../public/assets/images/gallery/2.jpg";
+import Thumbnail6 from "../../public/assets/images/gallery/6.jpg";
+import Thumbnail8 from "../../public/assets/images/gallery/8.jpg";
 
 <div className="card-group">
     <div className="card">
@@ -1110,10 +1110,10 @@ import Thumbnail8 from "../../../assets/images/gallery/8.jpg";
                     </div>
                 </div>
                 <SyntaxHighlighter language="javascript" className="mt-2 language-html py-2 px-2"  style={a11yLight}>
-                                {`import Thumbnail1 from "../../../assets/images/gallery/1.jpg";
-import Thumbnail2 from "../../../assets/images/gallery/2.jpg";
-import Thumbnail3 from "../../../assets/images/gallery/3.jpg";
-import Thumbnail9 from "../../../assets/images/gallery/9.jpg";
+                                {`import Thumbnail1 from "../../public/assets/images/gallery/1.jpg";
+import Thumbnail2 from "../../public/assets/images/gallery/2.jpg";
+import Thumbnail3 from "../../public/assets/images/gallery/3.jpg";
+import Thumbnail9 from "../../public/assets/images/gallery/9.jpg";
 
 <div className="row row-cols-1 row-cols-md-2 g-4">
     <div className="col">
@@ -1197,10 +1197,10 @@ import Thumbnail9 from "../../../assets/images/gallery/9.jpg";
                     </div>
                 </div>
                 <SyntaxHighlighter language="javascript" className="mt-2 language-html py-2 px-2"  style={a11yLight}>
-                                {`import Thumbnail2 from "../../../assets/images/gallery/2.jpg";
-import Thumbnail3 from "../../../assets/images/gallery/3.jpg";
-import Thumbnail9 from "../../../assets/images/gallery/9.jpg";
-import Thumbnail10 from "../../../assets/images/gallery/10.jpg";
+                                {`import Thumbnail2 from "../../public/assets/images/gallery/2.jpg";
+import Thumbnail3 from "../../public/assets/images/gallery/3.jpg";
+import Thumbnail9 from "../../public/assets/images/gallery/9.jpg";
+import Thumbnail10 from "../../public/assets/images/gallery/10.jpg";
 
 <div className="row row-cols-1 row-cols-md-3 g-4">
     <div className="col">
@@ -1284,10 +1284,10 @@ import Thumbnail10 from "../../../assets/images/gallery/10.jpg";
                     </div>
                 </div>
                 <SyntaxHighlighter language="javascript" className="mt-2 language-html py-2 px-2"  style={a11yLight}>
-                                {`import Thumbnail1 from "../../../assets/images/gallery/1.jpg";
-import Thumbnail4 from "../../../assets/images/gallery/4.jpg";
-import Thumbnail5 from "../../../assets/images/gallery/5.jpg";
-import Thumbnail7 from "../../../assets/images/gallery/7.jpg";
+                                {`import Thumbnail1 from "../../public/assets/images/gallery/1.jpg";
+import Thumbnail4 from "../../public/assets/images/gallery/4.jpg";
+import Thumbnail5 from "../../public/assets/images/gallery/5.jpg";
+import Thumbnail7 from "../../public/assets/images/gallery/7.jpg";
                                 
 <div className="row row-cols-1 row-cols-md-3 g-4">
     <div className="col">
@@ -1371,9 +1371,9 @@ import Thumbnail7 from "../../../assets/images/gallery/7.jpg";
                     </div>
                 </div>
                 <SyntaxHighlighter language="javascript" className="mt-2 language-html py-2 px-2"  style={a11yLight}>
-                                {`import Thumbnail2 from "../../../assets/images/gallery/2.jpg";
-import Thumbnail5 from "../../../assets/images/gallery/5.jpg";
-import Thumbnail6 from "../../../assets/images/gallery/6.jpg";
+                                {`import Thumbnail2 from "../../public/assets/images/gallery/2.jpg";
+import Thumbnail5 from "../../public/assets/images/gallery/5.jpg";
+import Thumbnail6 from "../../public/assets/images/gallery/6.jpg";
                                 
 <div className="row row-cols-1 row-cols-md-3 g-4">
     <div className="col">

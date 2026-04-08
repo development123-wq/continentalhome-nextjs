@@ -1,7 +1,7 @@
 // src/components/common/DownloadModal.js
 import React from 'react';
 import html2pdf from 'html2pdf.js';
-import logo from '../../../assets/images/logo.png';
+import logo from '../../public/assets/images/logo.png';
 
 function DownloadModal({ show, onClose, order }) {
   if (!show || !order) return null;

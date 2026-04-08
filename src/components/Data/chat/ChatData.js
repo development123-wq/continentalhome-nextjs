@@ -1,9 +1,9 @@
-import Avatar6 from '../../../assets/images//xs/avatar6.svg';
-import Avatar1 from '../../../assets/images//xs/avatar1.svg';
-import Avatar4 from '../../../assets/images//xs/avatar4.svg';
-import Avatar5 from '../../../assets/images//xs/avatar5.svg';
-import Avatar3 from '../../../assets/images//xs/avatar3.svg';
-import Avatar7 from '../../../assets/images//xs/avatar7.svg';
+import Avatar6 from '../../public/assets/images//xs/avatar6.svg';
+import Avatar1 from '../../public/assets/images//xs/avatar1.svg';
+import Avatar4 from '../../public/assets/images//xs/avatar4.svg';
+import Avatar5 from '../../public/assets/images//xs/avatar5.svg';
+import Avatar3 from '../../public/assets/images//xs/avatar3.svg';
+import Avatar7 from '../../public/assets/images//xs/avatar7.svg';
 
 
 export const ChatData=[

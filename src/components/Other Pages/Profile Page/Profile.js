@@ -1,5 +1,7 @@
+"use client";
+
 import React, { useEffect, useState } from 'react';
-import Avatar4 from '../../../assets/images/lg/avatar4.svg';
+import Avatar4 from '../../public/assets/images/lg/avatar4.svg';
 import { Modal } from 'react-bootstrap';
 
 function Profile() {

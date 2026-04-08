@@ -1,18 +1,20 @@
+"use client";
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';  
-import A1 from '../../../assets/images/product/thunb-1.jpg';
-import A2 from '../../../assets/images/product/thunb-2.jpg';
-import A3 from '../../../assets/images/product/thunb-3.jpg';
-import A4 from '../../../assets/images/product/thunb-4.jpg';
-import A5 from '../../../assets/images/product/thunb-5.jpg';
-import P1 from '../../../assets/images/product/productslide-1.jpg';
-import P2 from '../../../assets/images/product/productslide-2.jpg';
-import P3 from '../../../assets/images/product/productslide-3.jpg';
-import P4 from '../../../assets/images/product/productslide-4.jpg';
-import P5 from '../../../assets/images/product/productslide-5.jpg';
-import B1 from '../../../assets/images/product/product-items-1.jpg';
-import B2 from '../../../assets/images/product/product-items-2.jpg';
-import B3 from '../../../assets/images/product/product-items-3.jpg'
+import A1 from '../../public/assets/images/product/thunb-1.jpg';
+import A2 from '../../public/assets/images/product/thunb-2.jpg';
+import A3 from '../../public/assets/images/product/thunb-3.jpg';
+import A4 from '../../public/assets/images/product/thunb-4.jpg';
+import A5 from '../../public/assets/images/product/thunb-5.jpg';
+import P1 from '../../public/assets/images/product/productslide-1.jpg';
+import P2 from '../../public/assets/images/product/productslide-2.jpg';
+import P3 from '../../public/assets/images/product/productslide-3.jpg';
+import P4 from '../../public/assets/images/product/productslide-4.jpg';
+import P5 from '../../public/assets/images/product/productslide-5.jpg';
+import B1 from '../../public/assets/images/product/product-items-1.jpg';
+import B2 from '../../public/assets/images/product/product-items-2.jpg';
+import B3 from '../../public/assets/images/product/product-items-3.jpg'
 
 function OculusVR() {
     const [first_img, setFirst_img] = useState(3)

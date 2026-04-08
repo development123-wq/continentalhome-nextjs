@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from 'react'; // ⬅️ Add useState
 import { Editor } from '@tinymce/tinymce-react';
 

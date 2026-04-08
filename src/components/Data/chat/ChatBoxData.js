@@ -1,5 +1,5 @@
-import Avatar2 from '../../../assets/images/xs/avatar2.svg'
-import A1 from '../../../assets/images/gallery/1.jpg';
+import Avatar2 from '../../public/assets/images/xs/avatar2.svg'
+import A1 from '../../public/assets/images/gallery/1.jpg';
 
 export const ChatBoxData=[
     {

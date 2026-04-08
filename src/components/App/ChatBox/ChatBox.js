@@ -1,5 +1,5 @@
 import React from 'react';
-import Avatar2 from '../../../assets/images/xs/avatar2.svg'
+import Avatar2 from '../../public/assets/images/xs/avatar2.svg'
 import { Dropdown } from 'react-bootstrap';
 import { ChatBoxData } from '../../Data/chat/ChatBoxData';
 

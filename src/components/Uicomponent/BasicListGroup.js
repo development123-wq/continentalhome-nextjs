@@ -347,10 +347,10 @@
 //                         </div>
 //                         <div className="tab-pane fade blist-tab-pane-2" id="blist-nav-HTML2" role="tabpanel">
 //                         <SyntaxHighlighter language="javascript" className="mt-2 language-html py-2 px-2"  style={a11yLight}>
-//                                 {`import Avatar1 from "../../../assets/images/xs/avatar1.jpg"
-// import Avatar3 from "../../../assets/images/xs/avatar3.jpg"
-// import Avatar4 from "../../../assets/images/xs/avatar4.jpg"
-// import Avatar5 from "../../../assets/images/xs/avatar5.jpg"
+//                                 {`import Avatar1 from "../../public/assets/images/xs/avatar1.jpg"
+// import Avatar3 from "../../public/assets/images/xs/avatar3.jpg"
+// import Avatar4 from "../../public/assets/images/xs/avatar4.jpg"
+// import Avatar5 from "../../public/assets/images/xs/avatar5.jpg"
 
 
 // <!-- List Group: User list  -->

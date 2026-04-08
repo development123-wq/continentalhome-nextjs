@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+:root {
+    --primary-green: #63a682;
+    --primary-font:"Marcellus", serif;
+
+  }
+  *{
+    font-family:var(--primary-font);
+  }
+.container{
+    width:100%;
+}
+.content_row{
+    width:100%;
+    max-width:1200px;
+    text-align:center;
+    padding:30px 0px;
+    margin: auto !important;
+
+}
+.fancytext{
+    color:var(--primary-green);
+}
+.content-section{
+    width:100%;
+    display:flex;
+    margin-top:30px;
+    gap:20px;
+}
+.content-define{
+    width:50%;
+    float:left;
+    padding:10px;
+}
+
+.content-define h4{
+   
+    color:#ffffff;
+    font-size:15px;
+    font-family:var(--primary-font);
+    padding:10px 25px;
+    border-radius:50px;
+    width:fit-content;
+    margin:auto;
+    margin-top:10px;
+
+}
+.content-define-one{
+    height:500px;
+    width:50%;
+    background-attachment: fixed;
+    background:url('../../assets/images/content/image-bg.jpg');
+    background-size:cover;
+    text-align: center;
+    align-items: middle;
+   
+}
+.content-define-two{
+    height:500px;
+    width:50%;
+    background-attachment: fixed;
+    background:url('../../assets/images/content/image-bg1.jpg');
+    background-size:cover;
+    text-align: center;
+    align-items: middle;
+   
+}
+.top-right-banner{
+    height:240px;
+    width:100%;
+    background-attachment: fixed;
+    background:url('../../assets/images/content/right-content-bottom.jpg');
+    background-size:cover;
+    text-align: center;
+    align-items: middle;
+   
+}
+.bottom-right-banner{
+    height:240px;
+    width:100%;
+    background-attachment: fixed;
+    background:url('../../assets/images/content/right-content-top.jpg');
+    background-size:cover;
+    text-align: center;
+    align-items: middle;
+   
+}
+
+.content-banner-text{
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    font-family:var(--primary-font);
+}
+.content-heading{
+    color:#ffffff;
+    font-family:var(--primary-font);
+}
+.btn-div-content{
+    margin-top:60%;
+    font-family:var(--primary-font);
+    
+}
+.btn-div-content h4{
+    font-size:30px;
+    font-family:var(--primary-font);
+}
+.category-bg-bottom{
+    height:350px;
+    width:100%;
+    background-attachment: fixed;
+    background:url('../../assets/images/banner/banner-bottom.jpg');
+    background-size:cover;
+    text-align: left;
+    align-items: start;
+    display: grid;
+}
+.category-heading-bottom{
+    color:#000000;
+    font-size: 35px;
+}
+
+.bottom-right-twin-sec{
+    gap:20px;
+    display:grid;
+    max-width:50%;
+    width:100%;
+}
+
+.bottom-left-twin-sec{
+    height:500px;
+    width:50%;
+    background-attachment: fixed;
+    background:url('../../assets/images/content/left-content.jpg');
+    background-size:cover;
+    text-align: center;
+    align-items: middle;
+    padding:30px;
+   
+}
+.bottom-left-twin-sec h4{
+    margin:0px;
+    padding:0px;
+
+}
+.bottom-left-twin-sec .btn-div-content{
+    text-align:left;
+}
+.btn-div-content-twin{
+    margin-top: 10%;
+    text-align: left;
+    width: 300px;
+    float: right;
+    padding-right: 80px;
+}
+.bottom-right-banner h4{
+    color:white;
+}
+.product-best-offer-container{
+    width:100%;
+    max-width:100%;
+    background:linear-gradient(#63a68230, #ffffff);
+    margin:30px auto!important;
+    padding:40px 0px;
+}
+.content-section-banner{
+    max-width:1200px;
+    width:100%;
+    margin:auto;
+}
+.container-img-banner img{
+    margin-bottom:-100px;
+
+}
+.main-Shoppage img{
+    height:'100%!important';
+}
+.banner-btn-one-2{
+  margin-top:10px;
+  background:#63a682;
+  border:1px solid #63a682;
+  color:#fff;
+  padding:5px 20px;
+}
+.banner-btn-one-1{
+    padding:5px 25px;
+}
+
+@media (max-width: 768px) {
+    .content-define-one,
+    .content-define-two{
+     height:250px;
+    }
+
+    .category-heading-bottom{
+      font-size:22px;
+    }
+    .category-bg-bottom{
+      height:140px;
+      padding-left:10px;
+    }
+    .bottom-left-twin-sec{
+      height:340px;
+      padding-left:15px;
+    }
+    .top-right-banner{
+      height:180px;
+    }
+    .bottom-right-banner{
+      height:140px;
+    }
+    .btn-div-content h4 {
+      font-size:16px;
+    }
+    .btn-div-content-twin h4{
+      font-size:15px;
+      color:#fff;
+    }
+    .btn-div-content-twin{
+      width:auto;
+      padding-left:20px
+    }
+    .btn-div-content{
+    margin-top:100%;
+    }
+    .banner-btn-one-1{
+        padding:5px 10px;
+    }
+    .content-define h4{
+        padding-left: 0;
+       padding-right: 0;
+
+    }
+
+}
