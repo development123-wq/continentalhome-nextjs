@@ -72,7 +72,8 @@ const InnerBanner = () => {
     '/users': 'Welcome Back Dear!',
     '/categories/capiz-lamps':'Capiz Lamps',
     '/categories/capiz':'Capiz',
-    '/refund-policy':'Refund Policy',
+    '/refund-return':'Refund Policy',
+    '/tnc':'Terms & Conditions',
     '/wishlist':'Wishlist'
   };
 
@@ -83,7 +84,7 @@ const InnerBanner = () => {
     '/blogs': 'about.jpg',
     '/faqs': 'about.jpg',
     '/wishlist': 'about.jpg',
-    '/refund-policy': 'about.jpg',
+    '/refund-return': 'about.jpg',
     '/terms-and-conditions': 'about.jpg',
     '/privacy-policy': 'about.jpg',
     '/contact': 'about.jpg',
@@ -142,7 +143,8 @@ const InnerBanner = () => {
     '/product-details': 'product-details.jpg',
     '/checkout': 'salvaged.jpg',
     '/add-to-cart': 'salvaged.jpg',
-    '/productdetails': 'salvaged.jpg',
+    '/product-details': 'salvaged.jpg',
+    '/tnc': 'salvaged.jpg',
   };
 
   useEffect(() => {

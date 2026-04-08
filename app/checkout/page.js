@@ -1,5 +1,6 @@
+"use client";
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/navigation';
 import axios from 'axios';
 
 import Navbar from '@/components/Navbar/Navbar';
@@ -32,7 +33,7 @@ const COUNTRY_OPTIONS = [
   'Saudi Arabia',
 ];
 
-// 20 states (US focus, including New Hampshire)
+// 20 states
 const STATE_OPTIONS = [
   'New Hampshire',
   'California',
@@ -57,7 +58,7 @@ const STATE_OPTIONS = [
 ];
 
 const Checkout = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const [showModal, setShowModal] = useState(false);
   const [activeStep, setActiveStep] = useState(1);
@@ -83,14 +84,12 @@ const Checkout = () => {
 
   const [sameAsShipping, setSameAsShipping] = useState(false);
 
-  // Payment state
   const [payment, setPayment] = useState({
     cardNumber: '',
     expiry: '',
     cvv: '',
   });
 
-  // session derived
   const [shippingCost, setShippingCost] = useState(0);
   const [couponCode, setCouponCode] = useState('');
   const [discountPercent, setDiscountPercent] = useState(0);
@@ -112,7 +111,6 @@ const Checkout = () => {
   const [loginEmail, setLoginEmail] = useState('');
   const [loginPassword, setLoginPassword] = useState('');
 
-  // errors for required fields
   const [errors, setErrors] = useState({});
 
   useEffect(() => {
@@ -158,7 +156,7 @@ const Checkout = () => {
         state: shipping.state || 'New Hampshire',
       }));
     }
-  }, [sameAsShipping, shipping, billing]); // controlled sync pattern [web:2][web:7]
+  }, [sameAsShipping, shipping, billing]);
 
   const calc = (price, qty) => Number(price) * Number(qty || 1);
   const subtotal = cartItems.reduce((a, i) => a + calc(i.price, i.quantity), 0);
@@ -287,10 +285,8 @@ const Checkout = () => {
       gift_certificate_amount_redeemed: giftAmount,
       gift_certificate_code: giftCode,
       gift_certificate_expiration_date: giftExpiry,
-
       coupon_details: couponCode || null,
       coupon_cast: couponCode ? Number(Number(discountAmount).toFixed(2)) : 0,
-
       payment_method: paymentMethod,
       total_quantity: cartItems.reduce((a, i) => a + i.quantity, 0),
       total_shipped: 0,
@@ -331,7 +327,6 @@ const Checkout = () => {
       channel_name: 'Web',
       fee_details: feeDetails,
       grand_total: Number(total.toFixed(2)),
-
       card_number: sanitizedCard,
       card_cvv: sanitizedCvv,
       card_expiry: sanitizedExp,
@@ -368,7 +363,10 @@ const Checkout = () => {
 
     try {
       await axios.post('http://187.124.157.146:5001/api/orders/create', makePayload(), {
-        headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
+        headers: {
+          Authorization: `Bearer ${token}`,
+          'Content-Type': 'application/json',
+        },
       });
 
       setShowModal(false);
@@ -378,8 +376,7 @@ const Checkout = () => {
       setCartItems([]);
       sessionStorage.removeItem('authToken');
 
-      navigate('/add-to-cart');
-      window.location.reload();
+      router.push('/add-to-cart');
     } catch (err) {
       const msg = err.response?.data?.message || '';
       if (msg.includes('Access denied') || err.response?.status === 401) {
@@ -575,7 +572,6 @@ const Checkout = () => {
         return (
           <>
             <h2>Shipping Details</h2>
-
             {['address', 'zip', 'city'].map(L(shipping, setShipping, 'shipping'))}
 
             <label
@@ -787,7 +783,7 @@ const Checkout = () => {
                   fontWeight: 'bold',
                 }}
               >
-                <img src={progress} alt="loading" style={{ width: '100px' }} />
+                <img src={progress.src} alt="loading" style={{ width: '100px' }} />
                 <br />
                 Please wait a moment...
                 <br /> We are creating your order.
@@ -850,20 +846,8 @@ const Checkout = () => {
               <p>
                 <strong>Shipping:</strong> ${shippingCost.toFixed(2)}
               </p>
-              {/* {couponCode ? (
-                <p>
-                  <strong>
-                    Discount ({discountPercent}% – {couponCode}):
-                  </strong>{' '}
-                  -${discountAmount.toFixed(2)}
-                </p>
-              ) : (
-                <p>
-                  <strong>Discount:</strong> -$0.00
-                </p>
-              )} */}
               <h4>
-                <strong style={{color:'#63a682'}}>Total Amount:  ${total.toFixed(2)}</strong>
+                <strong style={{ color: '#63a682' }}>Total Amount: ${total.toFixed(2)}</strong>
               </h4>
             </>
           )}
