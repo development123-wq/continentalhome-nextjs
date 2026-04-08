@@ -53,7 +53,7 @@ const ZoomImage = ({ src, width = 500, height = 500 }) => {
   );
 };
 
-const ProductDetails = ({ params }) => {
+const productdetails = ({ params }) => {
   const router = useRouter();
   const id = params?.id;
 
@@ -172,7 +172,7 @@ const ProductDetails = ({ params }) => {
   };
 
   return (
-    <div className="main-ProductDetailspage">
+    <div className="main-productdetailspage">
       <Navbar />
       <InnerBanner />
 
@@ -183,7 +183,7 @@ const ProductDetails = ({ params }) => {
               <p>Loading product...</p>
             ) : product ? (
               <div
-                className="col-md-12 product-details-main-container"
+                className="col-md-12 productdetails-main-container"
                 style={{ width: "100%" }}
               >
                 <div
@@ -240,7 +240,7 @@ const ProductDetails = ({ params }) => {
                   )}
                 </div>
 
-                <div className="col-md-6 product-details-section">
+                <div className="col-md-6 productdetails-section">
                   <h3 className="product-title">{product.name}</h3>
                   <p className="price">${product.price}</p>
 
@@ -319,4 +319,4 @@ const ProductDetails = ({ params }) => {
   );
 };
 
-export default ProductDetails;
+export default productdetails;

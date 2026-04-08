@@ -1,68 +1,125 @@
 "use client";
-import React, { useState, useEffect } from 'react';
-import Navbar from '@/components/Navbar/Navbar';
-import Footer from '@/components/Footer/Footer';
-import InnerBanner from '@/components/InnerBanner/InnerBanner';
+
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import Navbar from "@/components/Navbar/Navbar";
+import Footer from "@/components/Footer/Footer";
+import InnerBanner from "@/components/InnerBanner/InnerBanner";
+import "@/components/style.css";
+
+const BASE_URL = "http://187.124.157.146:5001/";
 
 const SavageUniqueLamps = () => {
+  const router = useRouter();
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch('http://187.124.157.146:5001/api/products?search=&page=1&limit=500&categoryId=12')
+    fetch(`${BASE_URL}api/products?search=&page=1&limit=500&categoryId=12`)
       .then((res) => res.json())
       .then((response) => {
-        console.log('Full API Response:', response);
-
         if (Array.isArray(response.products)) {
           setData(response.products);
-
-          // Log each product to inspect structure
-          response.products.forEach((item, index) => {
-            console.log(`Product ${index + 1}:`, item);
-          });
         } else {
-          console.error('Unexpected API format', response);
+          console.error("Unexpected API format", response);
           setData([]);
         }
       })
       .catch((error) => {
-        console.error('API Error:', error);
+        console.error("API Error:", error);
       });
   }, []);
 
+  const handleProductOpen = (slug) => {
+    if (!slug) return;
+    router.push(`/${slug}`);
+  };
+
   return (
-    <div className="main-Shoppage">
+    <div className="shop-page-wrapper">
       <Navbar />
       <InnerBanner />
-      <div className="product-conatiner">
-        <div className="row product_row">
-          <h2>
-            Shop By <span className="fancy-text">Small Ceramics</span>
+
+      <div className="shop-container">
+        <main className="shop-content full-width-content">
+          <h2 className="shop-page-title">
+            Shop By <span className="fancy-text">Salvaged Unique Lamps</span>
           </h2>
-          <div className="col-md-12 product-section">
+
+          <div className="product-grid">
             {data.length > 0 ? (
               data.map((item) => (
-                <a href={`/productdetails?id=${item.id}&cat=${item.category_ids}`}>
-                <div className="product-define" key={item.id}>
-                  <div className="main-image-container">
-                    <img src={`http://187.124.157.146:5001/${item.main_image}`} alt={item.name} />
+                <div className="product-card-item" key={item.id}>
+                  <div className="p-card-inner">
+                    <div
+                      className="p-img-holder"
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        padding: "20px",
+                        height: "280px",
+                        background: "#ffffff",
+                      }}
+                    >
+                      <Link
+                        href={`/${item.slug || ""}`}
+                        style={{
+                          textDecoration: "none",
+                          color: "inherit",
+                          width: "100%",
+                          height: "100%",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                        }}
+                      >
+                        <img
+                          src={`${BASE_URL}${item.main_image}`}
+                          alt={item.name}
+                          style={{
+                            maxWidth: "80%",
+                            maxHeight: "80%",
+                            width: "auto",
+                            height: "auto",
+                            objectFit: "contain",
+                            objectPosition: "center",
+                            display: "block",
+                            background: "#ffffff",
+                          }}
+                        />
+                      </Link>
+                    </div>
+
+                    <div className="p-details">
+                      <Link
+                        href={`/${item.slug || ""}`}
+                        style={{ textDecoration: "none", color: "inherit" }}
+                      >
+                        <h5>{item.name}</h5>
+                      </Link>
+
+                      <p className="p-price">${item.price}</p>
+
+                      <button
+                        className="p-buy-now"
+                        type="button"
+                        onClick={() => handleProductOpen(item.slug)}
+                      >
+                        Buy Now
+                      </button>
+                    </div>
                   </div>
-                  <h3>{item.name}</h3>
-                  <p className="price">${item.price}</p>
-                 
-                  <button>
-                    Buy Now
-                  </button>
                 </div>
-                </a>
               ))
             ) : (
-              <p>Loading products...</p>
+              <p className="no-data">Loading products...</p>
             )}
           </div>
-        </div>
-        <Footer />
+        </main>
       </div>
+
+      <Footer />
     </div>
   );
 };

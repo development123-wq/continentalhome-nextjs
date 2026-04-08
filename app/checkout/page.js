@@ -163,7 +163,7 @@ const Checkout = () => {
   const tax = 0;
   const total = Math.max(0, subtotal + shippingCost - discountAmount - storeCredit - giftAmount + tax);
 
-  const productDetails = cartItems
+  const productdetails = cartItems
     .map(
       (p) =>
         `Product ID: ${p.id}, Product Qty: ${p.quantity}, Product SKU: ${p.sku || ''}, Product Name: ${
@@ -321,7 +321,7 @@ const Checkout = () => {
         phone: billing.phone,
         email: billing.email,
       },
-      product_details: productDetails,
+      product_details: productdetails,
       refund_amount: 0,
       channel_id: 1,
       channel_name: 'Web',

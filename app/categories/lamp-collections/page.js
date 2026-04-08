@@ -58,7 +58,7 @@ const SmallCeramics = () => {
       <div className="shop-container">
         <main className="shop-content full-width-content">
           <h2 className="shop-page-title">
-            Shop By <span className="fancy-text">Havana Lamp Collection</span>
+            Shop By <span className="fancy-text">Lamp Collection</span>
           </h2>
 
           <div className="product-grid">
@@ -74,7 +74,7 @@ const SmallCeramics = () => {
                         justifyContent: "center",
                         padding: "20px",
                         height: "280px",
-                        background: "#ffffff",
+                        background: "#fff",
                       }}
                     >
                       <Link
@@ -100,7 +100,6 @@ const SmallCeramics = () => {
                             objectFit: "contain",
                             objectPosition: "center",
                             display: "block",
-                            background: "#ffffff",
                           }}
                         />
                       </Link>

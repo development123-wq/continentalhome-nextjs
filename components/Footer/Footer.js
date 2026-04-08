@@ -148,20 +148,20 @@ const Footer = () => {
             <div className="footer-col" style={{ flex: '1 1 400px', marginBottom: '30px', paddingLeft: '50px' }}>
               <h3 style={{marginBottom:'20px'}}>CATEGORIES</h3>
               <ul style={{ listStyle: 'none', padding: 0, columnCount:'2' }}>
-                <li><a href="/new-arrivals" className="footer-menu">New Arrivals</a></li>
-                 <li><a href="/floor-lamps" className="footer-menu">Floor Lamps</a></li>
-                  <li><a href="/ceramic-lamp" className="footer-menu">Ceramic Lamps</a></li>
-                 <li><a href="/driftwood-lamps" className="footer-menu">Driftwood Lamps</a></li>
-                 <li><a href="/natural-vine-lamps" className="footer-menu">Natural Vine Lamps</a></li>
-                 <li><a href="/rope-lamps" className="footer-menu">Rope Lamps</a></li>
-                 <li><a href="/teak-lamps" className="footer-menu">Teak Lamps</a></li>
-                 <li><a href="/havana-lamp-collection" className="footer-menu">Havana Collection</a></li>
-                 <li><a href="/rope-lamps" className="footer-menu">Rope Collection</a></li>
-                 <li><a href="/salvaged-unique-lamps" className="footer-menu">Salvaged & Unique</a></li>
-                 <li><a href="/ceramic-vases" className="footer-menu">Ceramic Vases</a></li>
-                 <li><a href="/small-ceramics" className="footer-menu">Small Ceramics</a></li>
-                 <li><a href="/decorative-objects" className="footer-menu">Decorative Objects</a></li>
-                 <li><a href="/sculptural-pieces" className="footer-menu">Sculptural Pieces</a></li>
+                <li><a href="/categories/new-arrivals" className="footer-menu">New Arrivals</a></li>
+                 <li><a href="/categories/floor-lamps" className="footer-menu">Floor Lamps</a></li>
+                  <li><a href="/categories/ceramic-lamp" className="footer-menu">Ceramic Lamps</a></li>
+                 <li><a href="/categories/driftwood-lamps" className="footer-menu">Driftwood Lamps</a></li>
+                 <li><a href="/categories/natural-vine-lamps" className="footer-menu">Natural Vine Lamps</a></li>
+                 <li><a href="/categories/rope-lamps" className="footer-menu">Rope Lamps</a></li>
+                 <li><a href="/categories/teak-lamps" className="footer-menu">Teak Lamps</a></li>
+                 <li><a href="/categories/havana-lamp-collection" className="footer-menu">Havana Collection</a></li>
+                 <li><a href="/categories/rope-lamps" className="footer-menu">Rope Collection</a></li>
+                 <li><a href="/categories/salvaged-unique-lamps" className="footer-menu">Salvaged & Unique</a></li>
+                 <li><a href="/categories/ceramic-vases" className="footer-menu">Ceramic Vases</a></li>
+                 <li><a href="/categories/small-ceramics" className="footer-menu">Small Ceramics</a></li>
+                 <li><a href="/categories/decorative-objects" className="footer-menu">Decorative Objects</a></li>
+                 <li><a href="/categories/sculptural-pieces" className="footer-menu">Sculptural Pieces</a></li>
                
                 
               </ul>

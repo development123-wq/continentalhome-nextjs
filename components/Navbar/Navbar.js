@@ -24,16 +24,16 @@ const staticCategories = [
     ],
     nestedItems: {
       21: [
-        { name: "Ceramic Lamps", slug: "categories/ceramic-lamps" },
+        { name: "Ceramic Lamps", slug: "categories/ceramic-lamp" },
         { name: "Driftwood Lamps", slug: "categories/driftwood-lamps" },
         { name: "Natural Vine Lamps", slug: "categories/natural-vine-lamps" },
-        { name: "Rope Lamps", slug: "categories/rope-lamps" },
+        { name: "Rope Lamps", slug: "categories/rope-lamp" },
         { name: "Teak Lamps", slug: "categories/teak-lamps" },
         { name: "Capiz Lamps", slug: "categories/capiz-lamps" },
       ],
       23: [
         { name: "Havana Collection", slug: "categories/havana-lamp-collection" },
-        { name: "Rope Collection", slug: "categories/new-rope-lamps" },
+        { name: "Rope Collection", slug: "categories/rope-lamp-collections" },
         { name: "Salvaged & Unique", slug: "categories/salvaged-unique-lamps" },
       ],
     },

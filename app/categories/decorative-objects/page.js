@@ -17,7 +17,7 @@ const SmallCeramics = () => {
   const productsPerPage = 12;
 
   useEffect(() => {
-    fetch(`${BASE_URL}api/products?search=&page=1&limit=500&categoryId=15`)
+    fetch(`${BASE_URL}api/products?search=&page=1&limit=500&categoryId=2996`)
       .then((res) => res.json())
       .then((response) => {
         if (Array.isArray(response.products)) {
@@ -58,7 +58,7 @@ const SmallCeramics = () => {
       <div className="shop-container">
         <main className="shop-content full-width-content">
           <h2 className="shop-page-title">
-            Shop By <span className="fancy-text">Havana Lamp Collection</span>
+            Shop By <span className="fancy-text">Decorative Objects</span>
           </h2>
 
           <div className="product-grid">

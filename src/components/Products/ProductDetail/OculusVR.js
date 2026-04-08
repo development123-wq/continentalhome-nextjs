@@ -23,10 +23,10 @@ function OculusVR() {
         <div className="col-md-12">
             <div className="card">
                 <div className="card-body">
-                    <div className="product-details">
+                    <div className="productdetails">
                         <div className="row align-items-center">
                             <div className="col-lg-6">
-                                <div className="product-details-image mt-50">
+                                <div className="productdetails-image mt-50">
                                     <div className="product-thumb-image">
                                         <div className="product-thumb-image-active nav flex-column nav-pills me-3" id="v-pills-tab" >
                                             <a className=" single-thumb  lift" id="v-pills-one-tab" href="#v-pills-one" onClick={() => { setFirst_img(1) }}>
@@ -89,7 +89,7 @@ function OculusVR() {
                                 </div>
                             </div>
                             <div className="col-lg-6">
-                                <div className="product-details-content mt-45">
+                                <div className="productdetails-content mt-45">
                                     <h2 className="fw-bold fs-4">Oculus VR</h2>
                                     <div className="my-3">
                                         <i className="fa fa-star text-warning"></i>

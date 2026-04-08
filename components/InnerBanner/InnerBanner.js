@@ -68,7 +68,7 @@ const InnerBanner = () => {
     '/categories/unique-lamps': 'Unique Lamps',
     '/categories/salvaged-lamps': 'Salvaged Lamps',
     '/checkout': 'Checkout',
-    '/productdetails': 'Product Detail',
+    '/product-details': 'Product Detail',
     '/users': 'Welcome Back Dear!',
     '/categories/capiz-lamps':'Capiz Lamps',
     '/categories/capiz':'Capiz',

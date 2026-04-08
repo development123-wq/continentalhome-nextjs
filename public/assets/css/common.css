@@ -168,10 +168,10 @@
     color:var(--primary-color)!important;
 }
 
-.product-details-section{
+.productdetails-section{
     text-align:left;
 }
-.product-details-main-container{
+.productdetails-main-container{
     display:flex;
 }
 .product-title{
@@ -249,7 +249,7 @@ button:hover{
 .product-define{
     width:95%;
 }
-.product-details-main-container{
+.productdetails-main-container{
     display:flex;
     flex-direction: column;
 }
@@ -259,7 +259,7 @@ button:hover{
     padding:0px;
 }
 
-.product-details-section{
+.productdetails-section{
     padding:15px;
 }
 }
