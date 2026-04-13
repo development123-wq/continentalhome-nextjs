@@ -216,7 +216,7 @@ const Navbar = () => {
               >
                 <input
                   type="text"
-                  placeholder="Search for products..."
+                  placeholder="Search by name, price, id..."
                   className="headersearch"
                   value={searchQuery}
                   autoComplete="off"
@@ -290,6 +290,7 @@ const Navbar = () => {
                   ) : searchResults.length > 0 ? (
                     searchResults.map((product) => {
                       const pid = product.id || product._id;
+                      const pslug = product.slug || product.slug;
                       const imgSrc = imgErrors[pid]
                         ? "/placeholder.jpg"
                         : `${API_BASE}/${product.main_image}`;
@@ -300,7 +301,7 @@ const Navbar = () => {
                           style={{ borderBottom: "1px solid #f3f3f3" }}
                         >
                           <a
-                            href={`/productdetails?id=${pid}`}
+                            href={`/${pslug}`}
                             style={{
                               display: "flex",
                               alignItems: "center",

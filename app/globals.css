@@ -149,4 +149,30 @@ body {
           .shop-sidebar { width: 100%; position: relative; }
         }
 
+.btn-div-content-twin h4{
+  font-size:24px !important;
+  margin-bottom:20px !important; 
+}
+.most-popular-pro .swiper-pagination,.most-popular-pro .swiper-pagination-bullet{
+display:none !important;
+}
+button:hover,.category-define a:hover{
+  background:#000 !important;
+}
+.swiper-pagination-bullet-active{
+  background:#63a682 !important;
+}
+
+@media(max-width:767px)
+{
+.column-social-details,.contact-address-section .col-md-6{
+  max-width:100% !important;
+}
+.inner-banner{
+  min-height:auto !important;
+  padding:40px !important;
+}
+}
+
+
 

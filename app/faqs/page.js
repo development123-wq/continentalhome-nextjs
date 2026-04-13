@@ -7,6 +7,8 @@ import Footer from "@/components/Footer/Footer";
 import InnerBanner from "@/components/InnerBanner/InnerBanner";
 import "../../public/assets/css/faqs.css";
 
+
+
 const Shop = () => {
   const [activeSubIndex, setActiveSubIndex] = useState(null);
   const [activeMainIndex, setActiveMainIndex] = useState(null);
@@ -425,5 +427,6 @@ const Shop = () => {
     </div>
   );
 };
+
 
 export default Shop;

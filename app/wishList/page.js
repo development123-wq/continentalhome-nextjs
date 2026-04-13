@@ -5,6 +5,7 @@ import axios from 'axios';
 import Navbar from '@/components/Navbar/Navbar';
 import Footer from '@/components/Footer/Footer';
 import InnerBanner from '@/components/InnerBanner/InnerBanner';
+import '@/app/globals.css';
 import b1 from '../../public/assets/images/banner/category-banner-back.jpg';
 
 function Wishlist() {

@@ -40,11 +40,11 @@ const ProductList = () => {
     <div className="product-conatiner">
       <div className="row product_row">
         <div className="col-md-12">
-          <h2>
+          <h2 style={{marginBottom:'20px'}}>
             Most Popular <span className="fancytext">Products</span>
           </h2>
         </div>
-        <div className="col-md-12 product-section popular-products">
+        <div className="col-md-12 product-section popular-products most-popular-pro">
           {products.length > 0 ? (
             <Swiper
               modules={[Navigation, Pagination, Autoplay]}
@@ -68,12 +68,12 @@ const ProductList = () => {
             >
               {products.map((product, index) => (
                 <SwiperSlide key={index}>
-                  <a href={`/productdetails?id=${product.id}`}>
+                  <a href={`/${product.slug}`}>
                     <div className="product-define" style={{ width: '95%' }}>
                       <img
                         src={`http://187.124.157.146:5001/${product.main_image}`}
                         alt={product.name || 'Product'}
-                        style={{ maxWidth: '230px', borderRadius: '20px',height:'230px',objectFit:'contain',padding:'10px' }}
+                        style={{ maxWidth: '230px',margin:'auto', borderRadius: '20px',height:'230px',objectFit:'contain',padding:'10px' }}
                       />
                       <h3>{product.name || 'No Name'}</h3>
                       <p className="price">${product.price || '0.00'}</p>

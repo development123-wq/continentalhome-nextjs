@@ -4,6 +4,8 @@ import React, { useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar/Navbar';
 import Footer from '@/components/Footer/Footer';
 import InnerBanner from '@/components/InnerBanner/InnerBanner';
+import '@/app/globals.css';
+import '@/app/globals.css';
 
 const Shop = () => {
   const [contactData, setContactData] = useState(null);
@@ -76,7 +78,7 @@ const Shop = () => {
 
           <div className="col-md-6">
             <div className="form">
-              <h2>GET IN <span className="fancy-text">TOUCH</span></h2>
+              <h2>GET IN <span className="fancy-text" style={{color:'#63a682'}}>TOUCH</span></h2>
               <div className="col-md-12 fomr-input-field">
                 <div className="col-md-12"><input type="text" placeholder=" Your Name*" required /></div>
                 <div className="col-md-12"><input type="text" placeholder=" Phone*" required /></div>
@@ -90,7 +92,7 @@ const Shop = () => {
                 <div className="col-md-12"><input type="text" placeholder=" RMA Number" required /></div>
               </div>
               <textarea placeholder=" Comments/Questions" required></textarea><br />
-              <button type="submit" className="banner-btn-one">Send Request</button>
+              <button type="submit" className="banner-btn-one" style={{background:'#63a682',color:'#fff',padding:'10px 30px'}}>Send Request</button>
             </div>
           </div>
 

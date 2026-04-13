@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar/Navbar';
 import Footer from '@/components/Footer/Footer';
 import InnerBanner from '@/components/InnerBanner/InnerBanner';
+import '@/app/globals.css';
 
 const NewRopeLamps = () => {
   const [data, setData] = useState([]);
@@ -61,7 +62,7 @@ const NewRopeLamps = () => {
             {currentProducts.length > 0 ? (
               currentProducts.map((item) => (
                 <a
-                  href={`/productdetails?id=${item.id}&cat=${item.category_ids}`}
+                  href={`/${item.slug || ""}`}
                   key={item.id}
                   style={{
                     textDecoration: 'none',

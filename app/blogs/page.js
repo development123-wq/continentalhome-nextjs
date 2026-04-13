@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar/Navbar';
 import Footer from '@/components/Footer/Footer';
 import InnerBanner from '@/components/InnerBanner/InnerBanner';
+import '@/app/globals.css';
 
 const Shop = () => {
   const [blogs, setBlogs] = useState([]);

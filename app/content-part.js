@@ -43,7 +43,7 @@ const ContentPart = () => {
 
       <div className="max-w-3xl mx-auto product-best-offer-container">
         <div className="content-banner-text content-section-banner">
-          <h2 className="text-2xl font-bold text-center mb-6">
+          <h2 className="text-2xl font-bold text-center mb-6" style={{marginBottom:'20px'}}>
             Elevate Your Space with <span className="fancy-text">Elegant</span><br /> Home Decor
           </h2>
 
@@ -73,6 +73,7 @@ const ContentPart = () => {
                   <button
                     className="banner-btn-one-1 container-btn-banner"
                     onClick={() => window.location.href = item.link}
+                    style={{marginBottom:'20px'}}
                   >
                     Buy Now
                   </button>
@@ -83,13 +84,13 @@ const ContentPart = () => {
         </div>
       </div>
 
-      <div className="banner-home category-bg-bottom">
+      <div className="banner-home category-bg-bottom" style={{padding:'0px'}}>
         <div className="category-banner-text">
           <h1 className="category-heading-bottom">
             Discover the <span className="fancy-text">Perfect</span> Blend of<br />
             Elegance & Functionality
           </h1>
-          <button className="banner-btn-one-1" onClick={() => window.location.href = '/small-ceramics'}>Explore Now</button>
+          <button style={{marginTop:'20px'}} className="banner-btn-one-1" onClick={() => window.location.href = '/small-ceramics'}>Explore Now</button>
         </div>
       </div>
 

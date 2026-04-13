@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar/Navbar';
 import Footer from '@/components/Footer/Footer';
 import InnerBanner from '@/components/InnerBanner/InnerBanner';
+import '@/app/globals.css';
 
 const EarthToneCeramicLamps = () => {
   const [data, setData] = useState([]);
@@ -41,7 +42,7 @@ const EarthToneCeramicLamps = () => {
           <div className="col-md-12 product-section">
             {data.length > 0 ? (
               data.map((item) => (
-                <a href={`/productdetails?id=${item.id}&cat=${item.category_ids}`}>
+                <a href={`/${item.slug || ""}`}>
                 <div className="product-define" key={item.id}>
                   <div className="main-image-container">
                     <img src={`http://187.124.157.146:5001/${item.main_image}`} alt={item.name} />

@@ -1,7 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // 🔥 Image fix (external API images allow)
   images: {
     remotePatterns: [
       {
@@ -13,12 +12,15 @@ const nextConfig: NextConfig = {
     ],
   },
 
-  // 🔥 React routes handle (your existing logic)
   async rewrites() {
     return [
       {
-        source: "/:path*",
-        destination: "/", // sab routes React app ko bhejega
+        source: "/api/:path*",
+        destination: "http://187.124.157.146:5001/api/:path*",
+      },
+      {
+        source: "/uploads/:path*",
+        destination: "http://187.124.157.146:5001/uploads/:path*",
       },
     ];
   },
